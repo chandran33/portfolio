@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chandran — Web Developer Portfolio</title>
+  <link rel="stylesheet" href="ch.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">
+        <img src="chandran.jpg" alt="Chandran">
+      </div>
+      <div>
+        <h1>Chandran — <span class="highlight">Web Developer</span></h1>
+        <p class="lead">I build clean, responsive websites and web apps with HTML, CSS, and JavaScript.</p>
+        <div class="buttons">
+          <a class="btn btn-primary" href="#projects">See Projects</a>
+          <a class="btn btn-ghost" href="#contact">Contact</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section>
+        <div class="card" id="projects">
+          <h2>Projects</h2>
+
+          <div class="proj" 
+               data-title="Personal Portfolio"
+               data-desc="My personal responsive portfolio built with HTML, CSS, and JS." 
+               data-tags="HTML,CSS,JavaScript">
+            <div>
+              <h3>Personal Portfolio</h3>
+              <p>Showcase of my skills, projects, and contact info.</p>
+              <div class="tags">
+                <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+              </div>
+              <button class="btn btn-ghost" onclick="openProject(this)">View</button>
+            </div>
+          </div>
+
+          <div class="proj" 
+               data-title="Recipe Finder" 
+               data-desc="Recipe search web app built with vanilla JavaScript." 
+               data-tags="JavaScript,Responsive">
+            <div>
+              <h3>Recipe Finder</h3>
+              <p>Find and save recipes easily with a simple UI.</p>
+              <div class="tags">
+                <span class="tag">JavaScript</span><span class="tag">Web App</span>
+              </div>
+              <button class="btn btn-ghost" onclick="openProject(this)">View</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card about">
+          <h2>About Me</h2>
+          <p>Hi! I'm <strong>Chandran (CSBS)</strong>, a passionate Web Developer focused on building modern and user-friendly websites using HTML, CSS, and JavaScript.</p>
+        </div>
+      </section>
+
+      <aside>
+        <div class="card contact" id="contact">
+          <h2>Contact</h2>
+          <p><strong>Name:</strong> Chandran (CSBS)</p>
+          <p><strong>Email:</strong> <a href="mailto:chandran332004@gmail.com">chandran332004@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+917418831619">+91 74188 316619</a></p>
+        </div>
+      </aside>
+    </main>
+
+    <footer>
+      <p>© 2025 Chandran CSBS — Web Developer</p>
+    </footer>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-card">
+      <button class="close" onclick="closeModal()">✕</button>
+      <h2 id="m-title"></h2>
+      <div class="media" id="m-media"><img src="" alt="Preview"></div>
+      <p id="m-desc"></p>
+      <div id="m-tags" class="tags"></div>
+    </div>
+  </div>
+
+  <script src="ch.js"></script>
+</body>
+</html>
